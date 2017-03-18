@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id = "@+id/Logout"
+        android:title="Log Out">
+    </item>
+
+
+    <item
+        android:id = "@+id/WorkHistory"
+        android:title ="Work History">
+    </item>
+
+
+    <item
+        android:id ="@+id/InventoryHistory"
+        android:title="Inventory History">
+    </item>
+
+
+    <item
+        android:id="@+id/ClinessHistory"
+        android:title="Cliness History">
+    </item>
+
+</menu>

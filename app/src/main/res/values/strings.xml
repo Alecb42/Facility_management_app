@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Facility</string>
+    <string name="emptyString" />
+    <string name="indicatingUsername">Username</string>
+    <string name="typeUsername">Username</string>
+    <string name="indicatingPassword">Password</string>
+    <string name="typePassword">Password</string>
+    <string name="LoginButton">Log In</string>
+    <string name="WelcomeMessage">H building</string>
+
+    <string name="WelcomeMessage2">Manager Page!</string>
+    <string name="emptyString2" />
+    <string name="BuildingButton">Building</string>
+    <string name="InventoryButton">Inventory</string>
+    <string name="BathroomButton">Bathroom</string>
+
+
+    <string name="_1st_floor">1st Floor</string>
+    <string name="_2nd_floor">2nd Floor</string>
+    <string name="_3rd_floor">3rd Floor</string>
+    <string name="_4th_floor">4th Floor</string>
+    <string name="_5th_floor">5th Floor</string>
+    <string name="_6th_floor">6th Floor</string>
+    <string name="_7th_floor">7th Floor</string>
+    <string name="_8th_floor">8th Floor</string>
+    <string name="_9th_floor">9th Floor</string>
+    <string name="_10th_floor">10th Floor</string>
+
+    <string name="WelcomeMessage3">Building Page!</string>
+    <string name="WelcomeMessage4">Bathroom Page!</string>
+    <string name="WelcomeMessage5">Inventory Page!</string>
+    <string name="firstFloorBathroom">First Bathroom Page!</string>
+
+
+    <string name="comment1">Comment</string>
+    <string name="high1">HIgh</string>
+    <string name="item_refill1">Item refill</string>
+    <string name="level_of_dirtiness1">Level of Dirtiness</string>
+    <string name="low1">Low</string>
+    <string name="medium1">Medium</string>
+    <string name="reset1">Reset</string>
+    <string name="save1">Save</string>
+    <string name="soup1">Soup</string>
+    <string name="toilet_paper1">Toilet Paper</string>
+    <string name="up1">↑</string>
+    <string name="up2">↑</string>
+    <string name="down1">↓</string>
+    <string name="down2">↓</string>
+    <string name="resetCounter1">Reset</string>
+    <string name="reset">Reset</string>
+    <string name="building">Building</string>
+
+
+    <string name="Bathroom1">Bathroom1</string>
+    <string name="Bathroom2">Bathroom2</string>
+    <string name="Bathroom3">Bathroom3</string>
+    <string name="HallBuilding">Hall Building</string>
+
+
+</resources>
