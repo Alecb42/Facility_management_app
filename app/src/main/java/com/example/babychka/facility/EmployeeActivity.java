@@ -28,7 +28,7 @@ public class EmployeeActivity extends AppCompatActivity {
 
             public void onClick(View Bathroom) {
 
-                startActivity(new Intent(EmployeeActivity.this, firstFloorBathroom.class));
+                startActivity(new Intent(EmployeeActivity.this, BathroomActivity.class));
                 Toast.makeText(EmployeeActivity.this, "Accessed 1st floor Bathroom Page", Toast.LENGTH_SHORT).show();
             }
 

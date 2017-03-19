@@ -23,7 +23,9 @@
         <activity android:name=".secondFloorBathroom" />
         <activity android:name=".thirdFloorBathroom" />
         <activity android:name=".eWorkHistoryActivity" />
-        <activity android:name=".CleanActivity"></activity>
+        <activity android:name=".CleanActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".BathroomActivity"></activity>
     </application>
 
 </manifest>
