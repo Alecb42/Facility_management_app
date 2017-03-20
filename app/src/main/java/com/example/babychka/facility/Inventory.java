@@ -5,4 +5,5 @@ package com.example.babychka.facility;
  */
 
 public class Inventory {
+    private int soap;
 }
