@@ -7,22 +7,21 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 
 public class EmployeeActivity extends AppCompatActivity {
 
-    Button Bathroom1;    //Initialized Button variable for building area
-    Button Bathroom2;
-    Button Bathroom3;
+    ListView bathroomList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_employee);
 
-        Bathroom1 = (Button) findViewById(R.id.Bathroom1);
+        /*Bathroom1 = (Button) findViewById(R.id.Bathroom1);
 
         Bathroom1.setOnClickListener(new View.OnClickListener() {
 
@@ -34,37 +33,7 @@ public class EmployeeActivity extends AppCompatActivity {
 
         });
 
-        Bathroom2 = (Button) findViewById(R.id.Bathroom2);
-
-        Bathroom2.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View Bathroom) {
-
-                startActivity(new Intent(EmployeeActivity.this, secondFloorBathroom.class));
-                Toast.makeText(EmployeeActivity.this, "Accessed 2nd floor Bathroom Page", Toast.LENGTH_SHORT).show();
-            }
-
-        });
-
-        Bathroom3 = (Button) findViewById(R.id.Bathroom3);
-
-        Bathroom3.setOnClickListener(new View.OnClickListener() {
-
-            public void onClick(View Bathroom) {
-
-                startActivity(new Intent(EmployeeActivity.this, thirdFloorBathroom.class));
-                Toast.makeText(EmployeeActivity.this, "Accessed 3rd floor Bathroom Page", Toast.LENGTH_SHORT).show();
-            }
-
-        });
-
-
-
-        /*
-        TextView textViewEmployee = (TextView)findViewById(R.id.TextViewEmployeeUserName);
-        String Employee_username = getIntent().getStringExtra("empUsername");
-        textViewEmployee.setText(Employee_username);
-        */
+*/
     }
 
     //It has function, log out
