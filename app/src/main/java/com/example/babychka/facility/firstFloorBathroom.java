@@ -1,4 +1,5 @@
 package com.example.babychka.facility;
+//TODO change name of this activity to work recording
 
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
