@@ -139,7 +139,7 @@
 
     <Button
         android:onClick="countIN1"
-        android:id="@+id/button"
+        android:id="@+id/work_button"
         android:layout_width="28dp"
         android:layout_height="44dp"
         android:text="@string/up2"

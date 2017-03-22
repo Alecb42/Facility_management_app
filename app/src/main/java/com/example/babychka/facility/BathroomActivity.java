@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 public class BathroomActivity extends AppCompatActivity {
     TextView t_counter,t_limit;
-    Button workRecordButton;
+    Button workRecordButton, inventoryHistoryButton, entryHistoryButton;
     sensorServerHelper sensorServer = new sensorServerHelper();
     Bathroom bathroom = new Bathroom();
 
@@ -18,26 +18,78 @@ public class BathroomActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bathroom);
         setTitle(getIntent().getStringExtra("ID"));
-        workRecordButton = (Button) findViewById(R.id.button);
+
+        //Assigning UI variables to the layout ID items
+        workRecordButton = (Button) findViewById(R.id.work_button);
+        inventoryHistoryButton = (Button) findViewById(R.id.inventory_button);
+        entryHistoryButton = (Button)  findViewById(R.id.entry_button);
         t_counter = (TextView) findViewById(R.id.count);
         t_limit = (TextView) findViewById(R.id.limit_number);
 
-        //bathroom.setBathroomID(getIntent().getIntExtra("ID",0));
-        //t_limit.setText(getIntent().getStringExtra("ID"));
-
-        sensorServer.receive(BathroomActivity.this);
-        t_counter.setText(""+sensorServer.getCounter());
-
-        onWorkRecordOnclick();
+        checkEmployeeStatus(); //Sets the UI depending on the status of the employee.
+        retreiveEntryCounter(); //Gets the count from the sensor and displays it in a text view
 
     }
 
-    public void onWorkRecordOnclick(){
+    public void WorkRecordOnclick(){
         workRecordButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(BathroomActivity.this, firstFloorBathroom.class);
                 startActivity(intent);
             }
         });
-    }
+    }   //onClickListener to open the work recording activity
+
+    public void WorkHistoryOnClick(){
+        workRecordButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(BathroomActivity.this, eWorkHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+    }   //OnClickListener to open the work history activity
+
+    public void InventoryHistoryOnClick(){
+        inventoryHistoryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(BathroomActivity.this, eWorkHistoryActivity.class);
+                startActivity(intent);
+            }
+        });
+    }   //OnclickListener to open the inventory history activity
+
+    public void EntryHistoryOnClick(){
+        entryHistoryButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(BathroomActivity.this, EntryHistoryActivity.class);
+                intent.putExtra("ID", getIntent().getStringExtra("ID"));
+                startActivity(intent);
+            }
+        });
+    }   //OnclickListener to open the entry history activity
+
+    public void checkEmployeeStatus(){
+        if(getIntent().getBooleanExtra("Manager", false) == true)
+        {
+            workRecordButton.setText("View History Record");
+            inventoryHistoryButton.setText("Inventory History");
+            entryHistoryButton.setText("Entry History");
+            WorkHistoryOnClick();   //Manager wants to open the work recording HISTORY feature
+            InventoryHistoryOnClick();  //Manager want to open the inventory history feature
+            EntryHistoryOnClick();  //Manager want to open the entry history feature
+        }
+        if(getIntent().getBooleanExtra("Employee", false) == true)
+        {
+            workRecordButton.setText("Record Work Activity");
+            inventoryHistoryButton.setVisibility(View.GONE);    //Employee cannot see the inventory history button
+            entryHistoryButton.setVisibility(View.GONE);    //Employee cannot se the entry history button
+            WorkRecordOnclick();    //Employee wants to open the WORK RECORDING feature
+        }
+    }   //Checks the status of the employee, to build the corresponding UI.
+
+    public void retreiveEntryCounter(){
+        sensorServer.receive(BathroomActivity.this);
+        t_counter.setText(""+sensorServer.getCounter());
+    }   //Retreives the number of entries from the arduino server and assigns it to a textview.
+
 }

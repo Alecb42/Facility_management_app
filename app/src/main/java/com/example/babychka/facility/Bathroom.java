@@ -30,4 +30,8 @@ public class Bathroom {
     public void setCounter(int count){counter = count;}    //Sets the quantity of p
     public void setBathroomID(int ID){bathroomID = ID;}
     public void setBuildingID(int ID){buildingID = ID;}
+
+    //Server Functions
+    //TODO public void retreiveBathroom(int ID);
+    //TODO public void saveBathroom(int ID);
 }

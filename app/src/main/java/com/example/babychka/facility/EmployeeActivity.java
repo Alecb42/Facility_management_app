@@ -40,6 +40,8 @@ public class EmployeeActivity extends AppCompatActivity {
                                     long id) {
                 Intent intent = new Intent(EmployeeActivity.this, BathroomActivity.class);
                 intent.putExtra("ID", parent.getItemAtPosition(position).toString());
+                intent.putExtra("Manager", false);
+                intent.putExtra("Employee", true);
                 startActivity(intent);
             }
         });
