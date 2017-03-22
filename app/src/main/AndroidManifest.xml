@@ -24,7 +24,9 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".BathroomActivity" />
         <activity android:name=".EntryHistoryActivity" />
-        <activity android:name=".Calendar_Activity"></activity>
+        <activity android:name=".Calendar_Activity" />
+        <activity android:name=".WorkHistoryActivity" />
+        <activity android:name=".workRecordDisplay"></activity>
     </application>
 
 </manifest>

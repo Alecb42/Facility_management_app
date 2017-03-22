@@ -18,7 +18,10 @@ public class Calendar_Activity extends AppCompatActivity {
         calendar = (CalendarView) findViewById(R.id.calendarView);  //Assignement calendar object to the layout item
 
                if(getIntent().getBooleanExtra("Entry", false) == true) {    //Check if the intent is too access entry/calendar
-                  onDataListenerEntryHistory();
+                    onDataListenerEntryHistory();
+                }
+                if(getIntent().getBooleanExtra("Work", false) == true) {
+                    onDataListenerWorkHistory();
                 }
                 else {
                    Toast.makeText(getBaseContext(),"ERROR", Toast.LENGTH_LONG).show();
@@ -30,11 +33,24 @@ public class Calendar_Activity extends AppCompatActivity {
             @Override
             public void onSelectedDayChange(CalendarView view, int year, int month, int dayofMonth) {
                     Intent intent_entry_history = new Intent(Calendar_Activity.this, EntryHistoryActivity.class);   //Start the entry history activity
-                    intent_entry_history.putExtra("Intent", "Entry");   //Pass the type of activity that needs to be displayed
+                    intent_entry_history.putExtra("ID", getIntent().getIntExtra("ID",404));   //Pass the type of activity that needs to be displayed
                     intent_entry_history.putExtra("Year", year);    //Pass the year for which we need to display the entry
                     intent_entry_history.putExtra("Month", month);  //Pass the month for which we need to display the entry
                     intent_entry_history.putExtra("Day", dayofMonth);   //Pass the day for which we need to display the entry
                     startActivity(intent_entry_history);
+            }
+        });
+    }
+    public void onDataListenerWorkHistory(){
+        calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
+            @Override
+            public void onSelectedDayChange(CalendarView view, int year, int month, int dayofMonth) {
+                Intent intent_entry_history = new Intent(Calendar_Activity.this, WorkHistoryActivity.class);   //Start the entry history activity
+                intent_entry_history.putExtra("ID", getIntent().getIntExtra("ID",404));   //Pass the type of activity that needs to be displayed
+                intent_entry_history.putExtra("Year", year);    //Pass the year for which we need to display the entry
+                intent_entry_history.putExtra("Month", month);  //Pass the month for which we need to display the entry
+                intent_entry_history.putExtra("Day", dayofMonth);   //Pass the day for which we need to display the entry
+                startActivity(intent_entry_history);
             }
         });
     }

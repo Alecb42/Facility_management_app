@@ -43,7 +43,9 @@ public class BathroomActivity extends AppCompatActivity {
     public void WorkHistoryOnClick(){
         workRecordButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(BathroomActivity.this, firstFloorBathroom.class);
+                Intent intent = new Intent(BathroomActivity.this, Calendar_Activity.class);
+                intent.putExtra("ID", getIntent().getStringExtra("ID"));
+                intent.putExtra("Work", true);
                 startActivity(intent);
             }
         });
