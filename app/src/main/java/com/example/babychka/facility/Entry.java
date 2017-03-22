@@ -14,7 +14,8 @@ public class Entry {
     private Bathroom bathroom;
     private Calendar time_of_entry;
     private int number_of_entries;
-    String time = new String();
+    private String time = new String();
+    private sensorServerHelper sensorServer = new sensorServerHelper();
 
     Entry (int id, int count) {
         bathroom = new Bathroom();
@@ -32,7 +33,7 @@ public class Entry {
     public String getDate(){
         time = time_of_entry.toString();
         return time;
-    }
+    }   //Returns the date
 
     public void setTime_of_entry(){
       //Assigning the time of creation to the calendar object.
@@ -44,4 +45,9 @@ public class Entry {
         Date trialTime = new Date();    //Temporary date object, initialized with the time of creation
         time_of_entry.setTime(trialTime);    //Sets the calendar to the current data and time
 }   //Set the time of entry to the current time
+
+    public void getSensorData(){
+        //sensorServer.receive(BathroomActivity.this);
+        //t_counter.setText(""+sensorServer.getCounter());
+    }
 }
