@@ -43,7 +43,7 @@ public class BathroomActivity extends AppCompatActivity {
     public void WorkHistoryOnClick(){
         workRecordButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(BathroomActivity.this, eWorkHistoryActivity.class);
+                Intent intent = new Intent(BathroomActivity.this, firstFloorBathroom.class);
                 startActivity(intent);
             }
         });
@@ -52,7 +52,7 @@ public class BathroomActivity extends AppCompatActivity {
     public void InventoryHistoryOnClick(){
         inventoryHistoryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(BathroomActivity.this, eWorkHistoryActivity.class);
+                Intent intent = new Intent(BathroomActivity.this, Calendar_Activity.class);
                 startActivity(intent);
             }
         });
@@ -61,8 +61,9 @@ public class BathroomActivity extends AppCompatActivity {
     public void EntryHistoryOnClick(){
         entryHistoryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(BathroomActivity.this, EntryHistoryActivity.class);
+                Intent intent = new Intent(BathroomActivity.this, Calendar_Activity.class);
                 intent.putExtra("ID", getIntent().getStringExtra("ID"));
+                intent.putExtra("Entry", true); //Pass a boolean value, to indicate that the calendar will open the history entry.
                 startActivity(intent);
             }
         });

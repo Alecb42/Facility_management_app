@@ -24,7 +24,7 @@ public class EntryHistoryActivity extends AppCompatActivity {
         setTitle("Entry History");
         title = (TextView) findViewById(R.id.title);
         entryListView = (ListView) findViewById(R.id.entry_list);
-        title.setText("Daily entry of history of bathroom "); //+ getIntent().getStringExtra("ID"));
+        title.setText( getIntent().getIntExtra("Year",0) + "/" + getIntent().getIntExtra("Month",0) + "/" + getIntent().getIntExtra("Day",0));
         getEntries();
         UIsetup();
     }

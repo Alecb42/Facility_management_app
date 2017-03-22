@@ -20,11 +20,11 @@
         <activity android:name=".ManagerActivity" />
         <activity android:name=".InventoryActivity" />
         <activity android:name=".firstFloorBathroom" />
-        <activity android:name=".eWorkHistoryActivity" />
         <activity android:name=".CleanActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".BathroomActivity" />
-        <activity android:name=".EntryHistoryActivity"></activity>
+        <activity android:name=".EntryHistoryActivity" />
+        <activity android:name=".Calendar_Activity"></activity>
     </application>
 
 </manifest>
