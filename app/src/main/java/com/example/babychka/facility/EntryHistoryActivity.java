@@ -32,7 +32,7 @@ public class EntryHistoryActivity extends AppCompatActivity {
         int bathroom_id = 1;//PARSE TO INTInteger.parseInt(getIntent().getStringExtra("ID"));
         //search query with data and bathroom id 1.
         for (int i=0; i<5; i++) {
-            daily_Entries[i] = new Entry(bathroom_id,1);
+            daily_Entries[i] = new Entry(bathroom_id, this);
         }
     }
     public void UIsetup(){

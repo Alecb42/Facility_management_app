@@ -1,5 +1,7 @@
 package com.example.babychka.facility;
 
+import android.content.Context;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -16,12 +18,14 @@ public class Entry {
     private int number_of_entries;
     private String time = new String();
     private sensorServerHelper sensorServer = new sensorServerHelper();
+    private Context context;
 
-    Entry (int id, int count) {
-        bathroom = new Bathroom();
-        bathroom.setBathroomID(id);
-        number_of_entries = count;
-        setTime_of_entry();
+    Entry (int id, Context c) {
+        context=c;
+        bathroom = new Bathroom();  //Creation of bathroom object
+        bathroom.setBathroomID(id); //Assigning the passed ID to the bathroom object
+        getSensorData();    //Receives data from the sensor server
+        setTime_of_entry(); //Records the current time
     }
 
     Entry (int id, int count, Calendar date) {
@@ -47,7 +51,8 @@ public class Entry {
 }   //Set the time of entry to the current time
 
     public void getSensorData(){
-        //sensorServer.receive(BathroomActivity.this);
-        //t_counter.setText(""+sensorServer.getCounter());
+        sensorServer.receive(context);
+        number_of_entries = sensorServer.getCounter();
     }
+
 }
