@@ -5,6 +5,7 @@ import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
 public class firstFloorBathroom extends AppCompatActivity {
@@ -14,11 +15,27 @@ public class firstFloorBathroom extends AppCompatActivity {
     int counter1 = 0;               // it's the count variable.
     int counter2 = 0;
 
+    //rating variables
+    RatingBar rating;
+    TextView score;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_floor_bathroom);
 
+        // rating bar
+        rating = (RatingBar) findViewById(R.id.ratingBar);
+        score = (TextView) findViewById(R.id.Score1);
+
+        rating.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener(){
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromEmployee1){
+                {
+                    score.setText("Rate: " + rating);
+                }
+            }
+        });
 
         showValue1 = (TextView) findViewById(R.id.counterValue1);
         showValue2 = (TextView) findViewById(R.id.counterValue2);
