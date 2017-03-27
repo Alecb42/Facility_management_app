@@ -26,7 +26,7 @@ public class EmployeeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_employee);
 
         bathroomList = (ListView) findViewById(R.id.bathroom_list);
-        for(int i=0; i<3; i++)
+        for(int i=0; i<3; i++)  //TODO REPLACE BY DATABASE QUERY
         {
             bathrooms[i]="Bathroom "+i;
         }

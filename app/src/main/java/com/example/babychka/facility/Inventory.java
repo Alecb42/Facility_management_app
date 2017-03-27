@@ -21,8 +21,8 @@ public class Inventory {
 
     //get functions
     public int getSoap(){return soap;}  //Returns to number of soap used.
-    public int getToilet_paper(){return toilet_paper;}  //Returns the number of paper used
+    public int getToiletpaper(){return toilet_paper;}  //Returns the number of paper used
     //set functions
     public void setSoap(int quantity){soap = quantity;} //Sets the quantity of soap used
-    public void setToilet_paper(int quantity) {toilet_paper = quantity;}    //Sets the quantity of paper used
+    public void setToiletPaper(int quantity) {toilet_paper = quantity;}    //Sets the quantity of paper used
 }

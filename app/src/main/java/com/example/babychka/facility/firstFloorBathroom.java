@@ -26,13 +26,13 @@ public class firstFloorBathroom extends AppCompatActivity {
 
 
     //on each click on the button counter value will be increase  for toilet paper
-        public void countIN1 (View view) {
+    public void countIN1 (View view) {
             counter1++;
             showValue1.setText(Integer.toString(counter1));
         }
 
-        //on each click on the button counter value will be increase for toilet paper
-        public void countDC1 (View v) {
+    //on each click on the button counter value will be increase for toilet paper
+    public void countDC1 (View v) {
             counter1--;
             showValue1.setText(Integer.toString(counter1));
         }

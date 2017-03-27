@@ -49,12 +49,14 @@ public class BathroomActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-    }   //OnClickListener to open the work history activity
+    }   //OnClickListener to open the inventory history activity
 
     public void InventoryHistoryOnClick(){
         inventoryHistoryButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent intent = new Intent(BathroomActivity.this, Calendar_Activity.class);
+                intent.putExtra("ID", getIntent().getStringExtra("ID"));
+                intent.putExtra("Inventory", true); //Pass a boolean value, to indicate that the calendar will open the history entry.
                 startActivity(intent);
             }
         });

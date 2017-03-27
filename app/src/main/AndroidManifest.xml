@@ -26,7 +26,7 @@
         <activity android:name=".EntryHistoryActivity" />
         <activity android:name=".Calendar_Activity" />
         <activity android:name=".WorkHistoryActivity" />
-        <activity android:name=".workRecordDisplay"></activity>
+        <activity android:name=".workRecordDisplay" />
     </application>
 
 </manifest>

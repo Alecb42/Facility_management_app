@@ -37,7 +37,7 @@ public class WorkHistoryActivity extends AppCompatActivity {
                     Intent intent = new Intent(WorkHistoryActivity.this, workRecordDisplay.class);
                     intent.putExtra("Cleanliness", daily_work[position].getClean_index());
                     intent.putExtra("Soap", daily_work[position].getInventory().getSoap());
-                    intent.putExtra("ToiletPaper", daily_work[position].getInventory().getToilet_paper());
+                    intent.putExtra("ToiletPaper", daily_work[position].getInventory().getToiletpaper());
                     intent.putExtra("Comment", daily_work[position].getComments());
                     startActivity(intent);
                 }
@@ -47,7 +47,7 @@ public class WorkHistoryActivity extends AppCompatActivity {
 
     public void getWorkDone() {
         int bathroom_id = 1;//PARSE TO INTInteger.parseInt(getIntent().getStringExtra("ID"));
-        //search query with data and bathroom id 1.
+        //WILL BE REPLACED BY SEARCH QUERY
         for (int i = 0; i < 5; i++) {
             daily_work[i] = new workRecord();
             daily_work[i].setBathroomID(bathroom_id);
